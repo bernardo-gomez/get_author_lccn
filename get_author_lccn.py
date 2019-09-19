@@ -69,7 +69,7 @@ def worldcat_identities_link(doc_id,linked_data_host):
    if len(contribution_element) == 0:
        return link,outcome
 
-   primary_contributer=False
+   primary_contributor=False
 
    for contribution in contribution_element:
      Contribution=contribution.find('{http://id.loc.gov/ontologies/bibframe/}Contribution')
@@ -79,13 +79,13 @@ def worldcat_identities_link(doc_id,linked_data_host):
      for child in Contribution:
        if child.tag == '{http://www.w3.org/1999/02/22-rdf-syntax-ns#}type':
            if child.attrib['{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource'] == 'http://id.loc.gov/ontologies/bflc/PrimaryContribution':
-              primary_contributer=True
+              primary_contributor=True
        if child.tag == '{http://id.loc.gov/ontologies/bibframe/}agent':
             author_element=child.find('{http://id.loc.gov/ontologies/bibframe/}Agent')
             if author_element is None:
                   return link,outcome
             authority_uri=author_element.attrib['{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about']
-     if primary_contributer is True:
+     if primary_contributor is True:
           name_id=re.compile("http://id.loc.gov/authorities/names/(.*)")
           m=name_id.match(authority_uri)
           if m:
