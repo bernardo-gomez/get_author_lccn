@@ -105,8 +105,8 @@ def main():
    os.environ["LANG"]="en_US.utf8"
 
    docid_list=["990020275880302486"]
-   docid_list=["990029881400302486"]
-   docid_list=["9936709901402486"]
+   #docid_list=["990029881400302486"]
+   #docid_list=["9936709901402486"]
    linked_data_host="https://open-na.hosted.exlibrisgroup.com/alma/01GALI_EMORY/bf/entity/instance/"
    identities_link,outcome=worldcat_identities_link(str(docid_list[0]),linked_data_host)
    print  identities_link
