@@ -5,8 +5,8 @@
   that retrieves the BIBFRAME object for a given ALMA MMS_ID
   and extracts the Library of Congress Control Number of the corresponding
   personal name used as the main entry in the bibliographic record.
-  In other words, worldcat_identities_link() parses the XML 
-  bibframe and looks for the the "library of congress control number"
+  In other words, worldcat_identities_link() parses the 
+  bibframe XML and looks for the the "library of congress control number"
   for the work's author ("PrimaryContribution").
 
 """
