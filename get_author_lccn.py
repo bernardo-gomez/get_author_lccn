@@ -7,7 +7,7 @@
   personal name used as the main entry in the bibliographic record.
   In other words, worldcat_identities_link() parses the 
   bibframe XML and looks for the "library of congress control number"
-  for the work's author ("PrimaryContribution").
+  assigned to the work's author ("PrimaryContribution").
 
 """
 __author__ = "bernardo gomez"
